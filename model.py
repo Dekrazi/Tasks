@@ -16,12 +16,4 @@ class Task:
 
         return index
 
-    # #Read
-    # def print_title(self):
-    #     print('Title: ' + self.title)
-    # def print_desc(self):
-    #     print('Description ' +self.desc)
-
-    #Delete
-    #def delete_task(self, list):
-
+   
