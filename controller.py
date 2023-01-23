@@ -18,8 +18,15 @@ def list_tasks(taskList):
 
 def del_task(taskList):
     input("What task you want to remove? ")
-    for x in taskList:
-        taskList.remove(x)
-        x = input
-        print("Task deleted")
+    name_input = input
+    for task in taskList:
+        if task.title == name_input:
+            index = task.retrieve_idx(taskList)
+            taskList.pop(index) #tu w sumie nie wiem 
+            task_deleted = taskList.pop(index)
+            print(task_deleted)
+    
+        
+    
+        
 
