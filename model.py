@@ -16,6 +16,6 @@ class Task:
         return index
     #Delete
     def del_task(self, taskList):
-        del_task = input(taskList.remove())    
+        del_task = taskList.remove(input)   
 
    

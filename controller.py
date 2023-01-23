@@ -7,6 +7,8 @@ def add_task(taskList):
 
     taskList.append(newTask)
 
+
+
 def list_tasks(taskList):
     for task in taskList:
         index = task.retrieve_idx(taskList)
@@ -15,9 +17,9 @@ def list_tasks(taskList):
         print("Task description is: ", task.desc)
 
 def del_task(taskList):
-    for task in taskList:
-        input(task.remove(taskList))
-        del_task = input
-        
+    input("What task you want to remove? ")
+    for x in taskList:
+        taskList.remove(x)
+        x = input
         print("Task deleted")
 
