@@ -14,6 +14,10 @@ def list_tasks(taskList):
         print("Task title is: ", task.title)
         print("Task description is: ", task.desc)
 
-#TEST TEST NEW COMMIT TEST
-#test 2 pc 
+def del_task(taskList):
+    for task in taskList:
+        input(task.remove(taskList))
+        del_task = input
+        
+        print("Task deleted")
 

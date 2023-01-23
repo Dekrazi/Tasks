@@ -1,5 +1,4 @@
-from controller import add_task
-from controller import list_tasks
+from controller import add_task, list_tasks, del_task
 
 
 
@@ -21,11 +20,14 @@ def main():
                         add_task(task_list)
                 if option == 3:
                         list_tasks(task_list)
+                if option == 4:
+                        del_task(task_list)
+                        
                 elif option == 5:
                         exit()
 
                         #edit task
-                        #remove task
+                        
                         
 
 if __name__ == "__main__":
