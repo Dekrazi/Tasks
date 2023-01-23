@@ -10,10 +10,12 @@ class Task:
 
     def desc_change(self, new_desc):
         self.desc = new_desc
-
+    #Read
     def retrieve_idx(self, taskList):
         index = taskList.index(self)
-
         return index
+    #Delete
+    def del_task(self, taskList):
+        del_task = input(taskList.remove())    
 
    
