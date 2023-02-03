@@ -1,4 +1,4 @@
-from controller import add_task, list_tasks, del_task
+from controller import add_task, list_tasks, del_task, update_task
 
 
 
@@ -18,6 +18,8 @@ def main():
                 option = int(input('Enter your choice: ')) 
                 if option == 1:
                         add_task(task_list)
+                if option == 2:
+                        update_task(task_list)
                 if option == 3:
                         list_tasks(task_list)
                 if option == 4:

@@ -5,9 +5,8 @@ class Task:
         self.desc = desc
 
     #Update
-    def title_change(self, new_title):
+    def update_task(self, new_title):
         self.title = new_title
-
     def desc_change(self, new_desc):
         self.desc = new_desc
     #Read
