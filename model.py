@@ -18,6 +18,6 @@ class Task:
     #Delete
     def del_task(self, taskList):
         del_task = taskList.remove(self)
-        
+        return taskList
     
    
