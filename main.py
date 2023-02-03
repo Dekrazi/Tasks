@@ -26,10 +26,8 @@ def main():
                         del_task(task_list)
                         
                 elif option == 5:
+                        print("Thanks for using my task list!")
                         exit()
-
-                        #edit task
-                        
                         
 
 if __name__ == "__main__":

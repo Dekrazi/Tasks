@@ -4,8 +4,8 @@ def add_task(taskList):
     title = input("\nTask title: ")
     desc = input("\nTask description: ")
     newTask = Task(title, desc)
-
     taskList.append(newTask)
+
 
 def update_task(taskList):
     name_or_index = input("What task you want to update? Enter the title or index: ")
@@ -22,14 +22,12 @@ def update_task(taskList):
         else:
             print("Task not found")
             return
-
     new_title = input("Enter the new title: ")
     new_desc = input("Enter the new description: ")
     task.title = new_title
     task.desc = new_desc
     print(f"Task {name_or_index} has been updated to {new_title} with description {new_desc}")
 
-    
 
 def list_tasks(taskList):
     if len(taskList) == 0:
