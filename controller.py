@@ -5,6 +5,7 @@ def add_task(taskList):
     desc = input("\nTask description: ")
     newTask = Task(title, desc)
     taskList.append(newTask)
+    return taskList
 
 
 def update_task(taskList):
@@ -27,7 +28,7 @@ def update_task(taskList):
     task.title = new_title
     task.desc = new_desc
     print(f"Task {name_or_index} has been updated to {new_title} with description {new_desc}")
-
+    return taskList
 
 def list_tasks(taskList):
     if len(taskList) == 0:
@@ -38,7 +39,7 @@ def list_tasks(taskList):
         print("Task number: ", index)
         print("Task title is: ", task.title)
         print("Task description is: ", task.desc)
-
+    return taskList
 
 def del_task(taskList):
     name_or_index = input("What task you want to remove? Enter the title or task number: ")
@@ -56,6 +57,6 @@ def del_task(taskList):
                 break
         else:
             print("Task not found")
-    
+    return taskList    
         
 
