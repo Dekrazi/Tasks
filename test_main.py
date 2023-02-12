@@ -16,7 +16,7 @@ class TestTasks(unittest.TestCase):
     def test_update_task_by_index(self):
         task_list = [Task("Clean the House", "Wipe down counters"),
                     Task("Grocery Store", "Buy bread")]
-        #Assuming user wants to update task with index[0] 
+        #Assuming user wants to update task with index[0]
         updated_task_list = update_task(task_list)
         self.assertEqual(updated_task_list[0].title, "updated title")
         self.assertEqual(updated_task_list[0].desc, "updated desc")
