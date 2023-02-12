@@ -10,15 +10,24 @@ class TestTasks(unittest.TestCase):
         add_task(taskList)
 
         self.assertEqual(len(taskList), 1)
-        self.assertEqual(taskList[0].title, "TestT")
-        self.assertEqual(taskList[0].desc, "TestD")
+        self.assertEqual(taskList[0].title, "new title")
+        self.assertEqual(taskList[0].desc, "new desc")
 
-    # def test_update_task(self):
-    #     taskList = [{"title": "task1", "desc": "desc1"}]
-    #     updated_task_list = update_task(taskList)
-    #     self.assertEqual(updated_task_list, [{"title": "new", "desc": "new desc1"}])
+    def test_update_task_by_index(self):
+        task_list = [Task("Clean the House", "Wipe down counters"),
+                    Task("Grocery Store", "Buy bread")]
+        #Assuming user wants to update task with index[0]
+        updated_task_list = update_task(task_list)
+        self.assertEqual(updated_task_list[0].title, "updated title")
+        self.assertEqual(updated_task_list[0].desc, "updated desc")
 
-        #AttributeError: 'dict' object has no attribute 'title'
+    def test_update_task_by_title(self):
+        task_list = [Task("Clean the House", "Wipe down counters"),
+                    Task("Grocery Store", "Buy bread")]
+        #Assuming user wants to update task with title Grocery Store
+        task_list = update_task(task_list)
+        self.assertEqual(task_list[1].title, "updated title")
+        self.assertEqual(task_list[1].desc, "updated desc")
         
 
     def test_list_tasks(self):
@@ -34,18 +43,19 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(taskList[1].desc, "desc2")
 
     def test_del_task(self):  
-        taskList = [
-        {"title": "task1", "desc": "desc1"},
-        {"title": "task2", "desc": "desc2"}
-        ]
-        del_task(taskList)
+        taskList = []
 
+        task1 = Task("Clean the House", "Wipe down counters")
+        taskList.append(task1)
+        task2 = Task("Go to the Grocery Store", "Buy bread")
+        taskList.append(task2)
+        #Assuming user wants to delete task with index[0]
+        taskList = del_task(taskList)
         self.assertEqual(len(taskList), 1)
-        self.assertEqual(taskList[0]["title"], "task1")
-        self.assertEqual(taskList[0]["desc"], "desc1")
+        self.assertEqual(taskList[0].title, "Go to the Grocery Store")
+        self.assertEqual(taskList[0].desc, "Buy bread")
 
-        #Getting Ran 0 tests in 0.000s with this one
-
+            
         
 
 if __name__ == '__main__':
